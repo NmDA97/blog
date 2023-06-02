@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/app.css">
     
     <article>
-            <?=$post;?>
+            <?= $post; ?>
     </article>
     <a href="/">Go Back</a>
 </body>    
