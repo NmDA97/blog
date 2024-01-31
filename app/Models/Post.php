@@ -22,15 +22,11 @@ class Post extends Model
     {
 
         $query->when(
-            $filters['search'] ?? false,
-            fn ($query, $search) =>
+            $filters['search'] ?? false, fn ($query, $search) =>
 
-            $query->where(
-                fn ($query) =>
+            $query->where(fn ($query) =>
 
-                $query
-
-                    ->where('title', 'like', '%' . $search . '%')
+                $query-> where('title', 'like', '%' . $search . '%')
 
                     ->orwhere('body', 'like', '%' . $search . '%')
             )
