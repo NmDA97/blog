@@ -70,6 +70,15 @@ class Post extends Model
 
 
 
+    public function Comments()
+
+    {
+
+        return $this->hasMany(Comment::class);
+
+    }
+
+
     public function category()
 
     {
