@@ -33,7 +33,7 @@ class SessionsController extends Controller
 
         //based on the provided credentials
 
-        if (! auth()-> attempt($attributes)) {
+        if (! auth()->attempt($attributes)) {
 
             throw ValidationException::withMessages([
 
