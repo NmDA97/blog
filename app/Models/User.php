@@ -40,17 +40,18 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime'
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
     ];
 
 
 
-    public function setPasswordAttributes($password)
-    {
+    // public function setPasswordAttributes($password)
+    // {
 
-        $this->attributes['password'] = bcrypt($password);
+    //     $this->attributes['password'] = bcrypt($password);
 
-    }
+    // }
 
     
 
